@@ -100,53 +100,53 @@ def get_paytr_token(data: PayTRRequest):
     try:
         oid = ObjectId(data.submission_id)
     except:
-        raise HTTPException(status_code=400, detail="Geçersiz submission_id")
+        raise HTTPException(status_code=400, detail="Gecersiz submission_id")
     sub = db.submissions.find_one({"_id": oid})
     if not sub:
-        raise HTTPException(status_code=404, detail="Kayıt bulunamadı")
+        raise HTTPException(status_code=404, detail="Kayit bulunamadi")
 
-    merchant_oid = str(sub["_id"])[-12:]
+    import time
+    merchant_oid = "MP" + str(int(time.time()))
     email = sub.get("email", "test@test.com")
     user_name = sub.get("full_name", "Musteri")
     phone = sub.get("phone", "05000000000")
-    payment_amount = str(PRICE)
+    user_ip = "88.255.0.1"
+    payment_amount = PRICE
     currency = "TL"
-    no_installment = "0"
-    max_installment = "0"
-    test_mode = "1"
+    no_installment = 0
+    max_installment = 0
+    test_mode = 1
 
-    basket = [["Kisisel Diyet Plani", str(PRICE), 1]]
+    basket = [["Diyet Plani", str(payment_amount), 1]]
     basket_encoded = base64.b64encode(json.dumps(basket).encode()).decode()
 
-    hash_str = (
-        PAYTR_MERCHANT_ID + "88.255.0.1" + merchant_oid + email +
-        payment_amount + basket_encoded + no_installment +
-        max_installment + currency + test_mode + PAYTR_MERCHANT_SALT
-    )
+    hash_str = "".join([
+        PAYTR_MERCHANT_ID, user_ip, merchant_oid, email,
+        str(payment_amount), basket_encoded,
+        str(no_installment), str(max_installment),
+        currency, str(test_mode), PAYTR_MERCHANT_SALT
+    ])
     token = base64.b64encode(
-        hmac.new(PAYTR_MERCHANT_KEY.encode(), hash_str.encode(), hashlib.sha256).digest()
+        hmac.new(PAYTR_MERCHANT_KEY.encode("utf-8"), hash_str.encode("utf-8"), hashlib.sha256).digest()
     ).decode()
 
-    db.submissions.update_one({"_id": oid}, {"$set": {
-        "merchant_oid": merchant_oid,
-        "payment_method": "paytr"
-    }})
+    db.submissions.update_one({"_id": oid}, {"$set": {"merchant_oid": merchant_oid}})
 
     return {
         "token": token,
         "merchant_id": PAYTR_MERCHANT_ID,
         "merchant_oid": merchant_oid,
         "email": email,
-        "payment_amount": payment_amount,
+        "payment_amount": str(payment_amount),
         "user_basket": basket_encoded,
-        "no_installment": no_installment,
-        "max_installment": max_installment,
+        "no_installment": str(no_installment),
+        "max_installment": str(max_installment),
         "user_name": user_name,
         "user_address": "Turkiye",
         "user_phone": phone,
-        "user_ip": "88.255.0.1",
+        "user_ip": user_ip,
         "currency": currency,
-        "test_mode": test_mode,
+        "test_mode": str(test_mode),
         "lang": "tr",
     }
 
