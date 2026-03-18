@@ -11,7 +11,7 @@ from typing import Optional
 app = FastAPI(title="DiyetPlan API")
 
 # CORS
-origins = os.getenv("CORS_ORIGINS", "*").split(",")
+origins = ["*"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
