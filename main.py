@@ -1,1 +1,279 @@
-<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta name="robots" content="noindex,nofollow"><meta name="viewport" content="width=device-width,initial-scale=1"><style>*{box-sizing:border-box;margin:0;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%;color:#313131;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}body{display:flex;flex-direction:column;height:100vh;min-height:100vh}.main-content{margin:8rem auto;padding-left:1.5rem;max-width:60rem}@media (width <= 720px){.main-content{margin-top:4rem}}#challenge-error-text{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iI0IyMEYwMyIgZD0iTTE2IDNhMTMgMTMgMCAxIDAgMTMgMTNBMTMuMDE1IDEzLjAxNSAwIDAgMCAxNiAzbTAgMjRhMTEgMTEgMCAxIDEgMTEtMTEgMTEuMDEgMTEuMDEgMCAwIDEtMTEgMTEiLz48cGF0aCBmaWxsPSIjQjIwRjAzIiBkPSJNMTcuMDM4IDE4LjYxNUgxNC44N0wxNC41NjMgOS41aDIuNzgzem0tMS4wODQgMS40MjdxLjY2IDAgMS4wNTcuMzg4LjQwNy4zODkuNDA3Ljk5NCAwIC41OTYtLjQwNy45ODQtLjM5Ny4zOS0xLjA1Ny4zODktLjY1IDAtMS4wNTYtLjM4OS0uMzk4LS4zODktLjM5OC0uOTg0IDAtLjU5Ny4zOTgtLjk4NS40MDYtLjM5NyAxLjA1Ni0uMzk3Ii8+PC9zdmc+");background-repeat:no-repeat;background-size:contain;padding-left:34px}</style><meta http-equiv="refresh" content="360"></head><body><div class="main-wrapper" role="main"><div class="main-content"><noscript><div class="h2"><span id="challenge-error-text">Enable JavaScript and cookies to continue</span></div></noscript></div></div><script>(function(){window._cf_chl_opt = {cvId: '3',cZone: 'claude.ai',cType: 'managed',cRay: '9de64fa0b9a91dff',cH: '.oiMsgHVy0KGn382WAjtk.Wmh3J9TF79x2cF9bvZz40-1773858652-1.2.1.1-9FJgstAtnAEyMoKFuC20PjLY6jzgOEt8zsPy5Eq87DHnjJk8TweFBSxK4s8FfHyJ',cUPMDTk:"\/api\/files\/output\/main.py?__cf_chl_tk=QALKrwiLZXNr9PAoIJXdZVZAvuoNXXMVsn5f2UiKn40-1773858652-1.0.1.1-877f4kz.uskV4VYWOs0qbqwf2nyfwl3RtCuTjZu4aVw",cFPWv: 'b',cITimeS: '1773858652',cTplC:0,cTplO:0,cTplV:5,cTplB: '0',fa:"\/api\/files\/output\/main.py?__cf_chl_f_tk=QALKrwiLZXNr9PAoIJXdZVZAvuoNXXMVsn5f2UiKn40-1773858652-1.0.1.1-877f4kz.uskV4VYWOs0qbqwf2nyfwl3RtCuTjZu4aVw",md: 'YxtnzZf7Wkiv.baYzjnHKTGNWMOuhZBvoAK0_GfCPZ4-1773858652-1.2.1.1-hccbPHFyh44JNxrPMRDqZviWVOLjtOaTS44xIYTm9NYc5rm7_5qrDEdZNKLYiX1jAVgG_B9D0gM7fXRfd5Jv.CY5zchu0b3Qx4_uOUcrhfbtMfkQx9.ehItEhmR1fuKLt6uQ7FOMqVhKXd9tU3JZlwbodNEl2pDwAOrM7cy656x4AM1ZYlccCe1nO1htV.xM8Nn6.9ai24HvIE8_JzCn5Xc4aMy9nlKIoifvR0iNOOWvTSDapr_YmmBiNG8nNTgUjo1JWc0QARuEXy89xegC5RdtZO5c7Q48KTpVP47V6jaFBxCbWmwcxMzM_nrxgMhEIuIKmBhb70m8maG0kVQQDu96aBlynj2RBKt001gWiiJZQMLLBykqLeSh..XQ7X4PNXQG9WX46x8kBjsnS77m6j9ZWRoPIcHpr5kgKUKGfUL7CZybsW25Nz7Nl8wfoPV9J2oeZioXI.dlvk6E1OHq1WjpVp6Jx_aa4xoUpUxScilUqngSygn0UHqkKLuyHHaUSQ4PTqrj4M6byGOw5HvOPfJ_QZ9MarxceA6ny4px9of02RLDhxIMk9iqusxBu_p_klYXx4XiXKMaPLrWDOUIP7j4SIJ2Uij8MzUVlcLTKDyjpoj0Qj60OK8KWzYsRhBkQJkN4VvsPR1DXvGhAHjfCPUZ4VcBQCZlju8vv8NNC0T9hpdJfy_zAElnxQmVK7psk3A4FOkEnGFTntNLe9u0Uw45ZcZG7TgSBdXHTvFED16MoE6HrmwMn3swqGL0uWfCJbbouq9NX5HnIXaHCISCuwEJTgNT.3t_tlLK8V0g5.U6TBuORlqqfGDrb5OrSizz9ghcypuNbJ4qKFZja7iHqxefpUVodDVXh.FNqOfgjrPjH9jQTCqFcHJoBDcUPVuXDSGndrJDLYFKRSqVziR_6cF4dXaWKCMXn2hbtOLo8FQO2ujjOOub_6jVw_hKYQYd5opCTvot_rWophLmpgXKDGsJs.fvecxaqIkQBsT8yfI',mdrd: 'lFQPHfrfkMnDwTI13dyTykpxAOj1wnZ09aatkUSZzEE-1773858652-1.2.1.1-ltKNvpdByZl5pL0UYi1goZLGvctsEnnhbqkvzaqT.qcuEY4toD.8X2wI6V2_d7dQZWDuaIQ84TjLuAoTRsHd83qlbfzQE1p6ux0eH6dDHQLGJeeqXw9lMfPMUy6hbeBSBp3lSz8F7FGRdbuaQMmyv63SrZok4_ZtHkbkkrDtU6FMd0zWfht8bhpuw9819GB49UNlPqfDhr_XcRbqewyC6rF1gYRk8JyFm2lOjHI4mCLBKUHFakvfaAxqEMxCC7Aa10VCQrI.Ij1YOzk7tqPDJW5TUafx99d4lPzEFjoIzoNnUq7I0bGoBc4XOQJ3FKuujCcszATQezQCNkhA2_hBDsPCMSFAk2beBhNuqZNFEcyZYqxTnw_k.f1x_zw3mrt6WZoaewIADF6er9X89F85rQHEgMc0E4d5oH8wJjHWuV.bqXtW7CF1E24Bf8Db6RceieauLV63fFwEBS3c4QeKkj6aIsqqOpGnazHrWZL1XsSIyfsmfWTF_y3E3wfkLWtE16v9qXd8MO3UVBzcQokyASiqhVvnEDh0mvdvmheraqHYkhz8I9_Yc.qv52h4zkKlM9SVl8k.Vj7TMaLrmZZw.r_OoyKvpaTeazoXdLmnS9vixkHdzfk1IvlSfL01FFBKReZQ1h9redBrZyD043WNBbMnNjld0lmj2Nv5s25yMjzFHYkAtyycyQnS0I8ow9Zav61ZfexjCFJ8Ssx4fIoYfad3uu1ux7yaXhLI.lb_2dWejwhE67FcivhwZl0Vvf.fqdt.JSczqN1M4A53Bhuj7x8RD.l9sM7NOja0LcaD.NPRQcKzkEddQyuj86HJHtCk5S9gB1RUt8di6HBWvgULklpfy2Fb8hI559bWX6YbfskItN.1mk9ye4V_ErAS8TWNRvKktUdr3IysfRpKo8d6LfoopCQqw5VnkJLVP4i5DEUIQSLVQicyA6zoWAD7ocBLuuHRoKw1Nta6uHw2LYdz0Ca9mPpxnHDAyroRwBKaI0u2qDGMlvyeDyC9uvtX1UAlQ8Oqi9dLs.EhYkXru_98X5dcz.GQ2oWQbm1XdD7_1.vVj9ZnPPwWU135WL0u.g9jZU5oFrYvOvMRClpE7800nIPldRbWleNYHbOLMMMPy6P2FZ8VO.97HCoViEm.R4R3CsedFPqwxRgTve6UwZIU_QxZfokWKMaYW2vN5k6K_EPxmxUhlE5E_4Fh7V0h3tx2wVWdNOoOGymoHUnMByfeugkIVazoXDAk_OZeeIal6SklVClazZxbrvfVzxKQFHw_HaLxvcnjC1.PM.MJcFAXF8t5Ysfm32CM_3c07AY4FQBJYgHBT2ICI7jCJUnZJokZXHm8RPaGtPv_PqLwcV_7wU5FKGiZR.8L_ovLQO0DBjS8YdvpC5ZXdHrKv1KLUjek.DrRUixNQpd2Ux8XQt.d_Smmxk4fEWXIClUzOmByzcQlp65HEeXBwf2sSPv6g6TG8UEywVEAL5AVq9TrEuiJipemHa__S25NyQSrp4K5Sdxxrxy_vOcPT.xyOj980_t87gXjEe0bhdeM4wsXIr1Uk6ERwGrgwX.m6Xm8PnlPn1UMOGTc1n272ZOC1VhKMW3IoMR_QcDxAh4HIgqy5obOTzBrRlmeMGlHqvCQTeB92a6DUz0yAtg6wu7vARN35HtZklj0f5huJBwiE68TE5MpgE4_O8EQK3y0UzI_OUsxZ9.s_DwmGosCzY_QuAPWgr9VQHFtKJpLCnyqqjUXMj6iwDv4Cx_RPbxI_C4heAo3VaPkPG6sfKr.gyxJJqEW1NJ9U469vvL07zIHF7KSIkoFjCuoUafWiLdw8e4uq_OHS5W22BTYX377N_KojwlyUcFy.fOwwooRSUpCZDojZo9C0t9.r_7C5C42tKc1a.AnBWhIT1vIncCAjPeRuLGsC3nkzlG.uLWpuhOrQsxg7KT46mkUvVHaeKmSsAeeZd14DLt0e3B1P9Cu2mPEeUvasVgwDgHFJWJh5fR1TwXkyEGNoObfKsG5.Vr1C1A2ctC70tRmn.d8rSryAlB3EQ479pETUqxlD2CmkLbUCO2RXLzMvLX8mHk6XVcAx1KmTrHBrS2LaUZ7gj0nGYPR0rVCzhbnO4inpPUtPIlx6CtAgIKzSwunVgS6XaVkXYm_UiLUo8WU87p8U6zBoMit0rQWfamltYw6kfwglrp6elR1KpMTwvh.5LXJCVqZm_fFC15uMw.RmH8CwOehdh6mVjzKSV3Q9PbN0BRn2aMm0vRfEvJTAqO1hU_cZBPCc40zXWKT0atr61EahW8qRHRiSiC7npWHK6UVOERo3FftcYTT1yDUVyPvlOjh2DJ.uSntnXw0t0k8_ihcxYRCvZKQsJJFS46P.jhHp_r5zzKW4piqanhOTpDAvWqRWuBsa47i_BpRBLC8LmuDRP.R8noYv0WlwtxG5hUPDIsoe2a2o3SXby.Q6RWFZv8sg9x6OEmlfJ0zjrePX0s2YkIyGla5SVeVX.eP0NaQu4gtAb8dofGVGtWHBw',};var a = document.createElement('script');a.src = '/cdn-cgi/challenge-platform/h/b/orchestrate/chl_page/v1?ray=9de64fa0b9a91dff';window._cf_chl_opt.cOgUHash = location.hash === '' && location.href.indexOf('#') !== -1 ? '#' : location.hash;window._cf_chl_opt.cOgUQuery = location.search === '' && location.href.slice(0, location.href.length - window._cf_chl_opt.cOgUHash.length).indexOf('?') !== -1 ? '?' : location.search;if (window.history && window.history.replaceState) {var ogU = location.pathname + window._cf_chl_opt.cOgUQuery + window._cf_chl_opt.cOgUHash;history.replaceState(null, null,"\/api\/files\/output\/main.py?__cf_chl_rt_tk=QALKrwiLZXNr9PAoIJXdZVZAvuoNXXMVsn5f2UiKn40-1773858652-1.0.1.1-877f4kz.uskV4VYWOs0qbqwf2nyfwl3RtCuTjZu4aVw"+ window._cf_chl_opt.cOgUHash);a.onload = function() {history.replaceState(null, null, ogU);}}document.getElementsByTagName('head')[0].appendChild(a);}());</script></body></html>
+from fastapi import FastAPI, HTTPException, Depends, Header, Request
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
+from pydantic import BaseModel
+from pymongo import MongoClient
+from bson import ObjectId
+from datetime import datetime, timedelta
+import jwt, os, csv, io, hashlib, hmac, json, base64
+from typing import Optional
+
+app = FastAPI(title="DiyetPlan API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+MONGO_URL = os.getenv("MONGO_URL", "mongodb://localhost:27017")
+DB_NAME = os.getenv("DB_NAME", "diyetplan")
+client = MongoClient(MONGO_URL)
+db = client[DB_NAME]
+
+ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "DiyetAdmin2024!")
+JWT_SECRET = os.getenv("JWT_SECRET", "supersecretkey")
+PAYTR_MERCHANT_ID = os.getenv("PAYTR_MERCHANT_ID", "")
+PAYTR_MERCHANT_KEY = os.getenv("PAYTR_MERCHANT_KEY", "")
+PAYTR_MERCHANT_SALT = os.getenv("PAYTR_MERCHANT_SALT", "")
+PRICE = int(os.getenv("PRICE", "29900"))
+
+def verify_token(authorization: Optional[str] = Header(None)):
+    if not authorization or not authorization.startswith("Bearer "):
+        raise HTTPException(status_code=401, detail="Token gerekli")
+    token = authorization.split(" ")[1]
+    try:
+        jwt.decode(token, JWT_SECRET, algorithms=["HS256"])
+    except:
+        raise HTTPException(status_code=401, detail="Geçersiz token")
+
+class SubmissionCreate(BaseModel):
+    answers: dict
+    full_name: str
+    email: str
+    phone: str = ""
+
+class HavaleNotify(BaseModel):
+    submission_id: str
+    sender_name: str
+    sender_phone: str
+    note: str = ""
+
+class AdminLogin(BaseModel):
+    password: str
+
+class PayTRRequest(BaseModel):
+    submission_id: str
+    user_ip: str = "1.2.3.4"
+
+@app.get("/api/")
+def root():
+    return {"message": "DietPlan API v1.0"}
+
+@app.post("/api/submissions")
+def create_submission(data: SubmissionCreate):
+    doc = {
+        "answers": data.answers,
+        "full_name": data.full_name,
+        "email": data.email,
+        "phone": data.phone,
+        "status": "pending",
+        "created_at": datetime.utcnow().isoformat(),
+    }
+    result = db.submissions.insert_one(doc)
+    return {"id": str(result.inserted_id)}
+
+@app.post("/api/payments/havale-notify")
+def havale_notify(data: HavaleNotify):
+    try:
+        oid = ObjectId(data.submission_id)
+    except:
+        raise HTTPException(status_code=400, detail="Geçersiz submission_id")
+    sub = db.submissions.find_one({"_id": oid})
+    if not sub:
+        raise HTTPException(status_code=404, detail="Kayıt bulunamadı")
+    db.submissions.update_one({"_id": oid}, {"$set": {
+        "status": "havale_bekliyor",
+        "havale_sender_name": data.sender_name,
+        "havale_sender_phone": data.sender_phone,
+        "havale_note": data.note,
+        "havale_notified_at": datetime.utcnow().isoformat(),
+    }})
+    return {"success": True, "message": "Havale bildirimi alındı"}
+
+@app.post("/api/payments/paytr-token")
+def get_paytr_token(data: PayTRRequest):
+    if not PAYTR_MERCHANT_ID:
+        raise HTTPException(status_code=400, detail="PayTR bilgileri eksik")
+    try:
+        oid = ObjectId(data.submission_id)
+    except:
+        raise HTTPException(status_code=400, detail="Geçersiz submission_id")
+    sub = db.submissions.find_one({"_id": oid})
+    if not sub:
+        raise HTTPException(status_code=404, detail="Kayıt bulunamadı")
+
+    merchant_oid = str(sub["_id"])[-12:]
+    email = sub.get("email", "test@test.com")
+    user_name = sub.get("full_name", "Musteri")
+    phone = sub.get("phone", "05000000000")
+    payment_amount = str(PRICE)
+    currency = "TL"
+    no_installment = "1"
+    max_installment = "0"
+    test_mode = "1"
+
+    basket = [["Kisisel Diyet Plani", str(PRICE), 1]]
+    basket_encoded = base64.b64encode(json.dumps(basket).encode()).decode()
+
+    hash_str = (
+        PAYTR_MERCHANT_ID + data.user_ip + merchant_oid + email +
+        payment_amount + basket_encoded + no_installment +
+        max_installment + currency + test_mode + PAYTR_MERCHANT_SALT
+    )
+    token = base64.b64encode(
+        hmac.new(PAYTR_MERCHANT_KEY.encode(), hash_str.encode(), hashlib.sha256).digest()
+    ).decode()
+
+    db.submissions.update_one({"_id": oid}, {"$set": {
+        "merchant_oid": merchant_oid,
+        "payment_method": "paytr"
+    }})
+
+    return {
+        "token": token,
+        "merchant_id": PAYTR_MERCHANT_ID,
+        "merchant_oid": merchant_oid,
+        "email": email,
+        "payment_amount": payment_amount,
+        "user_basket": basket_encoded,
+        "no_installment": no_installment,
+        "max_installment": max_installment,
+        "user_name": user_name,
+        "user_address": "Turkiye",
+        "user_phone": phone,
+        "user_ip": data.user_ip,
+        "currency": currency,
+        "test_mode": test_mode,
+        "lang": "tr",
+    }
+
+@app.post("/api/payments/paytr-callback")
+async def paytr_callback(request: Request):
+    form = await request.form()
+    merchant_oid = form.get("merchant_oid", "")
+    status = form.get("status", "")
+    total_amount = form.get("total_amount", "")
+    hash_val = form.get("hash", "")
+
+    hash_str = merchant_oid + PAYTR_MERCHANT_SALT + status + total_amount
+    expected = base64.b64encode(
+        hmac.new(PAYTR_MERCHANT_KEY.encode(), hash_str.encode(), hashlib.sha256).digest()
+    ).decode()
+
+    if hash_val != expected:
+        return {"status": "error"}
+
+    if status == "success":
+        db.submissions.update_one(
+            {"merchant_oid": merchant_oid},
+            {"$set": {"status": "paid", "paid_at": datetime.utcnow().isoformat()}}
+        )
+    else:
+        db.submissions.update_one(
+            {"merchant_oid": merchant_oid},
+            {"$set": {"status": "failed"}}
+        )
+    return "OK"
+
+@app.post("/api/admin/login")
+def admin_login(data: AdminLogin):
+    if data.password != ADMIN_PASSWORD:
+        raise HTTPException(status_code=401, detail="Hatali sifre")
+    token = jwt.encode(
+        {"sub": "admin", "exp": datetime.utcnow() + timedelta(days=7)},
+        JWT_SECRET, algorithm="HS256"
+    )
+    return {"token": token}
+
+@app.get("/api/admin/stats")
+def admin_stats(_=Depends(verify_token)):
+    total = db.submissions.count_documents({})
+    paid = db.submissions.count_documents({"status": "paid"})
+    pending_havale = db.submissions.count_documents({"status": "havale_bekliyor"})
+    pending = db.submissions.count_documents({"status": "pending"})
+    return {
+        "total": total,
+        "paid": paid,
+        "havale_bekliyor": pending_havale,
+        "pending": pending,
+        "revenue": paid * (PRICE // 100),
+    }
+
+@app.get("/api/admin/submissions")
+def admin_submissions(
+    page: int = 1,
+    limit: int = 20,
+    search: str = "",
+    status: str = "",
+    _=Depends(verify_token)
+):
+    query = {}
+    if search:
+        query["$or"] = [
+            {"full_name": {"$regex": search, "$options": "i"}},
+            {"email": {"$regex": search, "$options": "i"}},
+            {"phone": {"$regex": search, "$options": "i"}},
+        ]
+    if status:
+        query["status"] = status
+    skip = (page - 1) * limit
+    cursor = db.submissions.find(query).sort("created_at", -1).skip(skip).limit(limit)
+    items = []
+    for doc in cursor:
+        doc["id"] = str(doc.pop("_id"))
+        items.append(doc)
+    total = db.submissions.count_documents(query)
+    return {"items": items, "total": total, "page": page}
+
+@app.post("/api/admin/approve-havale/{submission_id}")
+def approve_havale(submission_id: str, _=Depends(verify_token)):
+    try:
+        oid = ObjectId(submission_id)
+    except:
+        raise HTTPException(status_code=400, detail="Geçersiz ID")
+    db.submissions.update_one({"_id": oid}, {"$set": {
+        "status": "paid",
+        "paid_at": datetime.utcnow().isoformat(),
+    }})
+    return {"success": True}
+
+@app.post("/api/admin/reject-havale/{submission_id}")
+def reject_havale(submission_id: str, _=Depends(verify_token)):
+    try:
+        oid = ObjectId(submission_id)
+    except:
+        raise HTTPException(status_code=400, detail="Geçersiz ID")
+    db.submissions.update_one({"_id": oid}, {"$set": {"status": "failed"}})
+    return {"success": True}
+
+@app.get("/api/admin/export")
+def export_csv(_=Depends(verify_token)):
+    docs = list(db.submissions.find({}).sort("created_at", -1))
+    output = io.StringIO()
+    writer = csv.writer(output)
+    header = ["ID", "Ad Soyad", "E-posta", "Telefon", "Durum", "Tarih"]
+    for i in range(1, 61):
+        header.append(f"Soru {i}")
+    writer.writerow(header)
+    for doc in docs:
+        answers = doc.get("answers", {})
+        row = [
+            str(doc["_id"]),
+            doc.get("full_name", ""),
+            doc.get("email", ""),
+            doc.get("phone", ""),
+            doc.get("status", ""),
+            doc.get("created_at", ""),
+        ]
+        for i in range(1, 61):
+            row.append(answers.get(str(i), ""))
+        writer.writerow(row)
+    output.seek(0)
+    return StreamingResponse(
+        iter([output.getvalue()]),
+        media_type="text/csv",
+        headers={"Content-Disposition": "attachment; filename=musteriler.csv"}
+    )
