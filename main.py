@@ -111,7 +111,7 @@ def get_paytr_token(data: PayTRRequest):
     phone = sub.get("phone", "05000000000")
     payment_amount = str(PRICE)
     currency = "TL"
-    no_installment = "1"
+    no_installment = "0"
     max_installment = "0"
     test_mode = "1"
 
