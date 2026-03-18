@@ -20,7 +20,7 @@ app.add_middleware(
 
 MONGO_URL = os.getenv("MONGO_URL", "mongodb://localhost:27017")
 DB_NAME = os.getenv("DB_NAME", "diyetplan")
-client = MongoClient(MONGO_URL)
+client = MongoClient(MONGO_URL, serverSelectionTimeoutMS=5000)
 db = client[DB_NAME]
 
 ADMIN_PASSWORD = os.getenv("ADMIN_PASSWORD", "DiyetAdmin2024!")
