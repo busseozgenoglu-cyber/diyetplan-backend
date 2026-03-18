@@ -119,7 +119,7 @@ def get_paytr_token(data: PayTRRequest):
     basket_encoded = base64.b64encode(json.dumps(basket).encode()).decode()
 
     hash_str = (
-        PAYTR_MERCHANT_ID + data.user_ip + merchant_oid + email +
+        PAYTR_MERCHANT_ID + "88.255.0.1" + merchant_oid + email +
         payment_amount + basket_encoded + no_installment +
         max_installment + currency + test_mode + PAYTR_MERCHANT_SALT
     )
@@ -144,7 +144,7 @@ def get_paytr_token(data: PayTRRequest):
         "user_name": user_name,
         "user_address": "Turkiye",
         "user_phone": phone,
-        "user_ip": data.user_ip,
+        "user_ip": "88.255.0.1",
         "currency": currency,
         "test_mode": test_mode,
         "lang": "tr",
