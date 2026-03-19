@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException, Depends, Header, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, PlainTextResponse
 from pydantic import BaseModel
 from pymongo import MongoClient
 from bson import ObjectId
@@ -190,7 +190,7 @@ async def paytr_callback(request: Request):
             {"merchant_oid": merchant_oid},
             {"$set": {"status": "failed"}}
         )
-    return "OK"
+    return PlainTextResponse("OK")
 
 @app.post("/api/admin/login")
 def admin_login(data: AdminLogin):
@@ -297,4 +297,4 @@ def export_csv(_=Depends(verify_token)):
 
 @app.get("/api/payments/paytr-callback")
 def paytr_callback_get():
-    return "OK"
+    return PlainTextResponse("OK")
