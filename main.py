@@ -95,6 +95,7 @@ def havale_notify(data: HavaleNotify):
 
 @app.post("/api/payments/paytr-token")
 def get_paytr_token(data: PayTRRequest):
+    import requests as req
     if not PAYTR_MERCHANT_ID:
         raise HTTPException(status_code=400, detail="PayTR bilgileri eksik")
     try:
@@ -116,6 +117,8 @@ def get_paytr_token(data: PayTRRequest):
     no_installment = 0
     max_installment = 0
     test_mode = 1
+    merchant_ok_url = "https://fitnova.ink/basari"
+    merchant_fail_url = "https://fitnova.ink/odeme"
 
     basket = [["Diyet Plani", str(payment_amount), 1]]
     basket_encoded = base64.b64encode(json.dumps(basket).encode()).decode()
@@ -126,31 +129,40 @@ def get_paytr_token(data: PayTRRequest):
         str(no_installment), str(max_installment),
         currency, str(test_mode), PAYTR_MERCHANT_SALT
     ])
-    token = base64.b64encode(
+    paytr_token = base64.b64encode(
         hmac.new(PAYTR_MERCHANT_KEY.encode("utf-8"), hash_str.encode("utf-8"), hashlib.sha256).digest()
     ).decode()
 
-    db.submissions.update_one({"_id": oid}, {"$set": {"merchant_oid": merchant_oid}})
-
-    return {
-        "token": token,
+    # PayTR'ye token isteği gönder
+    paytr_response = req.post("https://www.paytr.com/odeme/api/get-token", data={
         "merchant_id": PAYTR_MERCHANT_ID,
+        "user_ip": user_ip,
         "merchant_oid": merchant_oid,
         "email": email,
         "payment_amount": str(payment_amount),
         "user_basket": basket_encoded,
         "no_installment": str(no_installment),
         "max_installment": str(max_installment),
+        "currency": currency,
+        "test_mode": str(test_mode),
         "user_name": user_name,
         "user_address": "Turkiye",
         "user_phone": phone,
-        "user_ip": user_ip,
-        "currency": currency,
-        "test_mode": str(test_mode),
+        "merchant_ok_url": merchant_ok_url,
+        "merchant_fail_url": merchant_fail_url,
+        "paytr_token": paytr_token,
         "lang": "tr",
-        "merchant_ok_url": "https://fitnova.ink/basari",
-        "merchant_fail_url": "https://fitnova.ink/odeme",
-    }
+        "debug_on": "1",
+    })
+
+    result = paytr_response.json()
+    if result.get("status") != "success":
+        raise HTTPException(status_code=400, detail=f"PayTR hatasi: {result.get('reason', 'Bilinmeyen hata')}")
+
+    iframe_token = result["token"]
+    db.submissions.update_one({"_id": oid}, {"$set": {"merchant_oid": merchant_oid}})
+
+    return {"iframe_token": iframe_token}
 
 @app.post("/api/payments/paytr-callback")
 async def paytr_callback(request: Request):
@@ -279,3 +291,6 @@ def export_csv(_=Depends(verify_token)):
         media_type="text/csv",
         headers={"Content-Disposition": "attachment; filename=musteriler.csv"}
     )
+
+
+# PayTR token'ı backend'den al, iframe URL'i döndür
