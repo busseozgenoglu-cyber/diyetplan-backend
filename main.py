@@ -148,6 +148,8 @@ def get_paytr_token(data: PayTRRequest):
         "currency": currency,
         "test_mode": str(test_mode),
         "lang": "tr",
+        "merchant_ok_url": "https://fitnova.ink/basari",
+        "merchant_fail_url": "https://fitnova.ink/odeme",
     }
 
 @app.post("/api/payments/paytr-callback")
