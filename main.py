@@ -208,11 +208,13 @@ def admin_stats(_=Depends(verify_token)):
     paid = db.submissions.count_documents({"status": "paid"})
     pending_havale = db.submissions.count_documents({"status": "havale_bekliyor"})
     pending = db.submissions.count_documents({"status": "pending"})
+    shipped = db.submissions.count_documents({"status": "shipped"})
     return {
         "total": total,
         "paid": paid,
         "havale_bekliyor": pending_havale,
         "pending": pending,
+        "shipped": shipped,
         "revenue": paid * (PRICE // 100),
     }
 
