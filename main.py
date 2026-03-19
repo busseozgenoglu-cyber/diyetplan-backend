@@ -298,3 +298,15 @@ def export_csv(_=Depends(verify_token)):
 @app.get("/api/payments/paytr-callback")
 def paytr_callback_get():
     return PlainTextResponse("OK")
+
+@app.post("/api/admin/mark-sent/{submission_id}")
+def mark_sent(submission_id: str, _=Depends(verify_token)):
+    try:
+        oid = ObjectId(submission_id)
+    except:
+        raise HTTPException(status_code=400, detail="Geçersiz ID")
+    db.submissions.update_one({"_id": oid}, {"$set": {
+        "status": "gonderildi",
+        "sent_at": datetime.utcnow().isoformat(),
+    }})
+    return {"success": True}
