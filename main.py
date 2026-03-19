@@ -263,6 +263,30 @@ def reject_havale(submission_id: str, _=Depends(verify_token)):
     db.submissions.update_one({"_id": oid}, {"$set": {"status": "failed"}})
     return {"success": True}
 
+
+QUESTIONS = {
+    1: "Ad Soyad", 2: "Yas", 3: "Cinsiyet", 4: "Meslek", 5: "Sehir",
+    6: "Boy (cm)", 7: "Kilo (kg)", 8: "Hedef Kilo (kg)", 9: "Beden Yapisi",
+    10: "Bel Cevresi (cm)", 11: "Kilo Bolgesi", 12: "1 Yildaki Kilo Degisimi",
+    13: "Kronik Hastalik Var Mi", 14: "Kronik Hastaliklar", 15: "Diyabet",
+    16: "Tiroid Sorunu", 17: "Hipertansiyon", 18: "Kolesterol", 19: "Gut Hastaligi",
+    20: "PCOS", 21: "Gida Alerjisi", 22: "Kullandigi Ilaclar",
+    23: "Aktivite Seviyesi", 24: "Egzersiz Turu", 25: "Egzersiz Suresi",
+    26: "Oturarak Gecirilen Sure", 27: "Gunluk Adim Sayisi",
+    28: "Kahvalti Yapiyor Mu", 29: "Kac Ogun Yiyor", 30: "Ara Ogun",
+    31: "Gece Yeme", 32: "Su Tuketimi", 33: "Tuz Tuketimi",
+    34: "Seker Tuketimi", 35: "Fast Food Sikligi", 36: "Alkol Tuketimi",
+    37: "Sigara Kullanimi", 38: "Sevilen Yiyecekler", 39: "Sevilmeyen Yiyecekler",
+    40: "Vejetaryen/Vegan Mi", 41: "Gluten Intoleransi", 42: "Laktoz Intoleransi",
+    43: "Uyku Suresi", 44: "Uyku Kalitesi", 45: "Stres Seviyesi",
+    46: "Stres Yeme", 47: "Ruh Hali ve Beslenme",
+    48: "Bagirsaklar", 49: "Hazimsizlik/Siskinlik",
+    50: "Odem/Su Tutma", 51: "Enerji Seviyesi", 52: "Bas Agrisi/Yorgunluk",
+    53: "Diyet Butcesi", 54: "Yemek Pisirme Suresi", 55: "Market Erisimi",
+    56: "Daha Once Diyet Denedi Mi", 57: "Diyette Zorlanan Konu",
+    58: "Motivasyon Etkenleri", 59: "Beslenme Beklentisi", 60: "Destek Turu"
+}
+
 @app.get("/api/admin/export")
 def export_csv(search: str = "", status: str = "", _=Depends(verify_token)):
     query = {}
@@ -279,7 +303,7 @@ def export_csv(search: str = "", status: str = "", _=Depends(verify_token)):
     writer = csv.writer(output)
     header = ["ID", "Ad Soyad", "E-posta", "Telefon", "Durum", "Tarih"]
     for i in range(1, 61):
-        header.append(f"Soru {i}")
+        header.append(QUESTIONS.get(i, f"Soru {i}"))
     writer.writerow(header)
     for doc in docs:
         answers = doc.get("answers", {})
