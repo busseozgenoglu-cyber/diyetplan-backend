@@ -264,8 +264,17 @@ def reject_havale(submission_id: str, _=Depends(verify_token)):
     return {"success": True}
 
 @app.get("/api/admin/export")
-def export_csv(_=Depends(verify_token)):
-    docs = list(db.submissions.find({}).sort("created_at", -1))
+def export_csv(search: str = "", status: str = "", _=Depends(verify_token)):
+    query = {}
+    if search:
+        query["$or"] = [
+            {"full_name": {"$regex": search, "$options": "i"}},
+            {"email": {"$regex": search, "$options": "i"}},
+            {"phone": {"$regex": search, "$options": "i"}},
+        ]
+    if status and status != "all":
+        query["status"] = status
+    docs = list(db.submissions.find(query).sort("created_at", -1))
     output = io.StringIO()
     writer = csv.writer(output)
     header = ["ID", "Ad Soyad", "E-posta", "Telefon", "Durum", "Tarih"]
