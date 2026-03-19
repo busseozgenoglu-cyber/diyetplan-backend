@@ -343,3 +343,15 @@ def mark_sent(submission_id: str, _=Depends(verify_token)):
         "sent_at": datetime.utcnow().isoformat(),
     }})
     return {"success": True}
+
+@app.post("/api/admin/mark-shipped/{submission_id}")
+def mark_shipped(submission_id: str, _=Depends(verify_token)):
+    try:
+        oid = ObjectId(submission_id)
+    except:
+        raise HTTPException(status_code=400, detail="Gecersiz ID")
+    db.submissions.update_one({"_id": oid}, {"$set": {
+        "status": "shipped",
+        "shipped_at": datetime.utcnow().isoformat(),
+    }})
+    return {"success": True}
