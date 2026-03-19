@@ -294,3 +294,7 @@ def export_csv(_=Depends(verify_token)):
 
 
 # PayTR token'ı backend'den al, iframe URL'i döndür
+
+@app.get("/api/payments/paytr-callback")
+def paytr_callback_get():
+    return "OK"
